@@ -1,0 +1,405 @@
+
+//---------------------------Général-------------------------------------//
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body{
+    display: flex;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: url('/images/strategie-echecs.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+// Déterminer la police //
+
+@font-face {
+    font-family:"oldsans" ;
+    src: url('/fonts/oldsansblack.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family:"choco";
+    src: url('/fonts/TT\ Chocolates\ Trial\ Medium.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+    font-family: "oldsans";
+} 
+
+.titrepages{
+    font-family: "oldsansblack";
+    font-size: 4rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    color: #fff;
+    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 0.6px;
+    backdrop-filter: blur(16px);
+    
+    
+
+}
+
+h2{
+    font-family: "oldsansblack";
+    font-size: 2rem;
+    display: flex;
+    margin:2.8vh 2.5vh;
+}
+
+
+h3{
+    font-size: 1.2rem;
+    color: #fff;
+    font-style: normal;
+}
+
+p{
+    font-family:'choco';
+    font-size: medium;
+}
+
+.taillelienfoot, .lienmanusc{
+    text-decoration: none;
+    color: #b3dffc;
+    font-size: 1.2rem;
+    font-family: "oldsans";
+}
+
+// style du passage de la souris sur les liens //
+
+.taillelienfoot:hover, .lienmanusc:hover {
+    color: black;
+    border-radius: 50px;
+    background-color: #b3daf2;
+    background-size: 20px;
+    padding: 5px;
+    font-size: 1.3rem;
+}
+
+#lienconx{
+    text-decoration: none;
+    color: #b3daf2;
+    font-family: "oldsansblack";
+    font-size: 1.3rem;
+    font-weight: 550;
+}
+
+#lienconx:hover{
+    text-decoration: underline;
+}
+// header //
+
+header{
+    position: relative;
+    background-color: #BF212F;
+    padding: 2vh 8vh 2vh 2vh;
+    margin-right: 0;
+}
+
+img[alt="logo"]{
+    position: absolute;
+    border-radius: 50%;
+    border-color: black;
+    background-color: white;
+    margin: auto;
+}
+
+.navbarhead{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    max-width: 1200px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin-left: 21em;
+    margin-right: 5em;
+}
+
+.navbarhead .linkshead {
+    display: flex;
+    gap: 2rem;
+}
+
+.buttons{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 2rem; 
+    margin-left: 13em;
+}
+
+// footer//
+
+footer{
+    position: relative;
+    background-color: #BF212F;
+    padding: 2vh 3vh 8vh 40vh;
+    display: flex;
+    height: 100px;
+    justify-content: space-evenly;
+}
+
+.liensfooter{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.taillelienfoot{
+    font-size: 15px;
+
+}
+
+.iconesfooter {
+    display: flex;
+    gap: 1rem;
+    margin: 5px 4em 20px 0;
+    justify-content: flex-end;
+}
+
+.positionlienfoot{
+    margin: 10px 5em 20px 0;
+}
+
+//contenu page//
+
+.content{
+    width: auto;
+    flex-grow: 1;
+}
+
+// Responsive //
+
+//-----------------------Page: Qui sommes-nous? --------------------------//
+
+.boxqsn{
+    border: solid 0.5rem #61a656 ;
+    margin: 30px 20px;
+    padding:20px 30px;
+}
+
+// -----------------------Page: Lieux-----------------------------------//
+
+// -----------------------checkbox personnalisée-----------------------//
+option{
+    font-family: "choco";
+    font-size: 1rem;
+    cursor: pointer;
+    color: black;
+}
+
+label{
+    font-size: 1.8em;
+    font-family: "oldsansblack";
+}
+
+select{
+    width: 300px;
+    border: 5px solid #61a656;
+    padding: 5px;
+    height:80vh;
+}
+
+// positionnement de la checkbox et du bouton "valider"//
+label, select, .inputlieu{
+    margin-left: 5vh;
+    margin-bottom: 3vh;
+}
+
+.inputlieu{
+    cursor: pointer;
+    background-color: #61a656;
+    font-family: "oldsansblack";
+    font-size: large;
+    border:solid white 3px ;
+    color: #fff;
+    border-radius: 40px;
+    padding: 5px;
+    margin-left: 20vh;
+    text-decoration: none;
+}
+
+// disposition des containers de la page lieux//
+
+#bosscontainerlieux{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#bigboss2lieux{
+    align-self: center;
+}
+
+// personnalisation des titres des liens des lieux//
+
+.lienbars{
+    background-color: #BF212F;
+    font-family: "oldsansblack";
+    font-size: 1em;
+    color: #fff;
+    box-shadow: 10px 3px 3px grey;
+    padding: 5px 3px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    margin-left: 9vh;
+    margin-top: 2vh;
+    border-radius: 40px;
+}
+
+//--------------------------------page: connexion---------------------//
+
+
+#mainconnex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#boxconnect{
+    width: 420px;
+    background: #BF212F;
+    color: black;
+    padding: 30px 40px;
+    margin-top: -130px;
+    border-radius: 10px;
+    padding: 30px 40px;
+    background: transparent;
+    border: solid #fff;
+    backdrop-filter: blur(30px);
+    box-shadow: 0 0 10px black;
+
+}
+
+#boxconnect h1{
+    font-size: 36px;
+    text-align: center;
+
+}
+
+#boxconnect .inputbox{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+} 
+
+.inputbox input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid #fff;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.inputbox input::placeholder{
+    color: #fff;
+}
+
+.inputbox i {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+    transform: translate(-50%);
+    font-size: 20px;
+}
+
+#boxconnect .remember_forgot{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+    margin: -15px 5px 10px -35px;
+    color: #fff;
+}
+.remember_forgot label input{
+    accent-color:#fff;
+    margin-right: 3px;
+}
+
+.remember_forgot a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 17px;
+    margin-top: 0.9px;
+    margin-right: -15px;
+}
+
+.remember_forgot a:hover{
+    text-decoration: underline;
+}
+
+#boxconnect .btn {
+    width: 100%;
+    height: 45px;
+    background: #61a656;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px black;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#boxconnect .lieninscription {
+    font-size: 14.5px;
+    text-align: center;
+    margin-top: 20px;
+}
+#titreconx{
+    color: #fff;
+}
+
+.lieninscription p {
+    color: #fff;
+    font-weight: 600;
+}
+.lieninscription p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 3px;
+}
+
+.lieninscription p a:hover{
+    text-decoration: underline;
+}
+
+
+// --------------------page: mentions légales-----------------------------//
+.boxqml{
+    border: solid 0.5rem #61a656 ;
+    margin: 30px 20px;
+    padding:20px 30px;
+}
+
+
+
+
+
+
+
+
