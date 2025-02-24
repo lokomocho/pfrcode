@@ -1,3 +1,5 @@
+/*---------------------------Général-------------------------------------*/
+
 * {
   margin: 0;
   padding: 0;
@@ -6,56 +8,61 @@
 
 body {
   display: flex;
-  min-height: 100vh;
-  display: flex;
   flex-direction: column;
   background: url("/images/strategie-echecs.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
 
+/* Déterminer la police */
+
 @font-face {
-  font-family: "oldsans";
+  font-family: "oldsansblack";
   src: url("/fonts/oldsansblack.ttf");
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "choco";
-  src: url("/fonts/TT Chocolates Trial Medium.otf");
+  src: url("/fonts/TT\ Chocolates\ Trial\ Medium.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 li {
   list-style: none;
-  font-family: "oldsans";
+  font-family: "oldsansblack";
 }
 
-.titrepages {
+h1 {
   font-family: "oldsansblack";
   font-size: 4rem;
   font-weight: 800;
   display: flex;
   justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   color: #fff;
   -webkit-text-stroke-color: black;
   -webkit-text-stroke-width: 0.6px;
-  -webkit-backdrop-filter: blur(16px);
-          backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
 }
 
 h2 {
   font-family: "oldsansblack";
   font-size: 2rem;
   display: flex;
-  margin: 2.8vh 2.5vh;
+  justify-content: center;
+
+  color: #fff;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.6px;
+  margin: 1.5vh 1.5vh;
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   color: #fff;
   font-style: normal;
 }
@@ -65,107 +72,125 @@ p {
   font-size: medium;
 }
 
-.taillelienfoot, .lienmanusc {
+.lienmanusc {
   text-decoration: none;
-  color: #b3dffc;
-  font-size: 1.2rem;
-  font-family: "oldsans";
+  color: #fff;
+  font-size: 25px;
+  font-family: "oldsansblack";
 }
 
-.taillelienfoot:hover, .lienmanusc:hover {
+/* style du passage de la souris sur les liens */
+
+.lienmanusc:hover {
   color: black;
   border-radius: 50px;
   background-color: #b3daf2;
-  background-size: 20px;
-  padding: 5px;
-  font-size: 1.3rem;
+
 }
 
-#lienconx {
-  text-decoration: none;
-  color: #b3daf2;
-  font-family: "oldsansblack";
-  font-size: 1.3rem;
-  font-weight: 550;
-}
 
 #lienconx:hover {
   text-decoration: underline;
 }
 
+/* header */
+
 header {
   position: relative;
-  background-color: #BF212F;
-  padding: 2vh 8vh 2vh 2vh;
-  margin-right: 0;
+  background-color: #bf212f;
+  padding: 10px 0;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  z-index: 500;
 }
 
-img[alt=logo] {
-  position: absolute;
+header img{
+  position: relative;
   border-radius: 50%;
   border-color: black;
-  background-color: white;
-  margin: auto;
+  margin-left: 10px;
 }
 
-.navbarhead {
+header nav{
   position: relative;
   width: 100%;
   height: 100px;
   max-width: 1200px;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  margin-left: 21em;
-  margin-right: 5em;
+  margin: auto;
 }
 
-.navbarhead .linkshead {
+header ul{
   display: flex;
-  gap: 2rem;
+  width: 100%;
+  justify-content: space-between;
+
 }
 
-.buttons {
+.iconsheader {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: 2rem;
   margin-left: 13em;
+  height: 50px;
+  width: 50px;
 }
+
+/*-------------main---------------*/
+
+main{
+  flex:1;
+}
+
+.content{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  min-height: auto;
+  padding-top: 60px;
+  text-align: center;
+}
+
+
+/* -------------footer*--------------*/
 
 footer {
   position: relative;
-  background-color: #BF212F;
-  padding: 2vh 3vh 8vh 40vh;
+  background-color: #bf212f;
+  padding: 2vh 3vh;
   display: flex;
-  height: 100px;
+  height: auto;
   justify-content: space-evenly;
+  width: auto;
+  margin: 0;
 }
 
-.liensfooter {
-  width: 1200px;
-  margin: 0 auto;
+footer img {
+    height: 50px;
+    width: 50px;
 }
 
-.taillelienfoot {
-  font-size: 15px;
-}
-
-.iconesfooter {
+footer ul {
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   margin: 5px 4em 20px 0;
   justify-content: flex-end;
 }
 
-.positionlienfoot {
+footer a {
   margin: 10px 5em 20px 0;
 }
 
-.content {
-  width: auto;
-  flex-grow: 1;
-}
+/* Responsive */
+
+/*-----------------------Page: Qui sommes-nous? --------------------------*/
 
 .boxqsn {
   border: solid 0.5rem #61a656;
@@ -173,6 +198,9 @@ footer {
   padding: 20px 30px;
 }
 
+/* -----------------------Page: Lieux-----------------------------------*/
+
+/*-----------------------checkbox personnalisée-----------------------*/
 option {
   font-family: "choco";
   font-size: 1rem;
@@ -192,7 +220,10 @@ select {
   height: 80vh;
 }
 
-label, select, .inputlieu {
+/* positionnement de la checkbox et du bouton "valider"*/
+label,
+select,
+.inputlieu {
   margin-left: 5vh;
   margin-bottom: 3vh;
 }
@@ -210,6 +241,8 @@ label, select, .inputlieu {
   text-decoration: none;
 }
 
+/* disposition des containers de la page lieux*/
+
 #bosscontainerlieux {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -219,8 +252,10 @@ label, select, .inputlieu {
   align-self: center;
 }
 
+/* personnalisation des titres des liens des lieux*/
+
 .lienbars {
-  background-color: #BF212F;
+  background-color: #bf212f;
   font-family: "oldsansblack";
   font-size: 1em;
   color: #fff;
@@ -234,6 +269,8 @@ label, select, .inputlieu {
   border-radius: 40px;
 }
 
+/*--------------------------------page: connexion---------------------*/
+
 #mainconnex {
   display: flex;
   justify-content: center;
@@ -243,7 +280,7 @@ label, select, .inputlieu {
 
 #boxconnect {
   width: 420px;
-  background: #BF212F;
+  background: #bf212f;
   color: black;
   padding: 30px 40px;
   margin-top: -130px;
@@ -251,8 +288,7 @@ label, select, .inputlieu {
   padding: 30px 40px;
   background: transparent;
   border: solid #fff;
-  -webkit-backdrop-filter: blur(30px);
-          backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
   box-shadow: 0 0 10px black;
 }
 
@@ -279,10 +315,6 @@ label, select, .inputlieu {
   font-size: 16px;
   color: #fff;
   padding: 20px 45px 20px 20px;
-}
-
-.inputbox input::-moz-placeholder {
-  color: #fff;
 }
 
 .inputbox input::placeholder {
@@ -341,7 +373,6 @@ label, select, .inputlieu {
   text-align: center;
   margin-top: 20px;
 }
-
 #titreconx {
   color: #fff;
 }
@@ -350,7 +381,6 @@ label, select, .inputlieu {
   color: #fff;
   font-weight: 600;
 }
-
 .lieninscription p a {
   color: #fff;
   text-decoration: none;
@@ -362,6 +392,7 @@ label, select, .inputlieu {
   text-decoration: underline;
 }
 
+/* --------------------page: mentions légales-----------------------------*/
 .boxqml {
   border: solid 0.5rem #61a656;
   margin: 30px 20px;
@@ -369,23 +400,29 @@ label, select, .inputlieu {
 }
 
 
-/*# sourceMappingURL=style.css.map */
-
-
-
-/*--------------------Carroussel------------------------------*/
-.carousel {
+/*----------------------carousel-------------------------------------------*/
+.carousel { 
   width: 80vw;
-  height: 100vh;
+  margin:auto;
+  display: flex;
+  justify-content: center;
   position: relative;
-  background-color: #3a333480;
-  margin: 5vh;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  height: auto;
+  padding: 20px;
+  max-width: 800px;
 }
+
 
 .carousel > ul {
   margin: 0;
   padding: 0;
   list-style: none;
+  position: relative;
+  height: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .slide {
@@ -399,9 +436,9 @@ label, select, .inputlieu {
 .slide > img {
   display: block;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
+  object-fit: contain;
+
 }
 
 .slide[data-active] {
@@ -412,7 +449,7 @@ label, select, .inputlieu {
 
 .carousel-button {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   background: none;
   border: none;
   font-size: 4rem;
@@ -422,13 +459,12 @@ label, select, .inputlieu {
   cursor: pointer;
   border-radius: .25rem;
   padding: 0 .5rem;
-  background-color: rgba(0, 0, 0, .1);
 }
 
 .carousel-button:hover,
 .carousel-button:focus {
   color: white;
-  background-color: rgba(0, 0, 0, .2);
+  background-color: rgba(0, 0, 0, );
 }
 
 .carousel-button:focus {
@@ -436,33 +472,37 @@ label, select, .inputlieu {
 }
 
 .carousel-button.prev {
-  left: 1rem;
+  left: 10px;
 }
 
 .carousel-button.next {
-  right: 1rem;
+  right: 10px;
 }
 
-.carousel_container{
+.carousel_container p{ 
+  font-size: 20px;
 
 }
 
 .image_carousel {
-  width: 50vh;
-  height: 50vh;
+  width: 25vh;
   display: flex;
   justify-self: center;
+  object-fit: cover;
 }
 
 .title_carousel{
   display: flex;
   justify-self: center;
   color: #fff;
+  background-color: #b3daf2;
 
 }
 
 .text_carousel{
-  display: flex;
+  display: block;
+  text-align: center;
+  margin-top: 10px;
   justify-self: center;
   text-align: center;
   color: #fff;
@@ -470,8 +510,3 @@ label, select, .inputlieu {
   width: 120vh;
 
 }
-
-
-
-
-
